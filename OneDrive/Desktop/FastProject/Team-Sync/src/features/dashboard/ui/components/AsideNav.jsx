@@ -3,8 +3,9 @@ import { NavLink } from "react-router";
 import NavigationTab from "./NavigationTab";
 import { useSelector } from "react-redux";
 import { store } from "../../../../app/store";
-import { adminNavigations } from "../../../../constant/Navigation";
-import { employeeNavigations } from "../../../../constant/Navigation";
+
+
+import {adminNavigations, employeeNavigations} from "../../../../constant/Navigation"
 
 const AsideNav = () => {
   let { employee } = useSelector((store) => store.auth);
