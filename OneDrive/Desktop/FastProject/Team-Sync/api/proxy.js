@@ -1,13 +1,25 @@
+
 const BACKEND_URL = "https://team-sync-backend-n78w.onrender.com";
 
 export default async function handler(req, res) {
   try {
-    const requestPath = req.url.replace(/^\/api/, "");
-    const targetUrl = `${BACKEND_URL}/api${requestPath}`;
+    const incomingUrl = new URL(req.url, `https://${req.headers.host}`);
+    const apiPath = incomingUrl.searchParams.get("path");
+
+    if (!apiPath) {
+      return res.status(400).json({
+        success: false,
+        message: "API path is missing",
+      });
+    }
+
+    const targetUrl = new URL(`/api/${apiPath}`, BACKEND_URL);
+
+    incomingUrl.searchParams.delete("path");
+    targetUrl.search = incomingUrl.searchParams.toString();
 
     const headers = new Headers();
 
-    // Forward required headers, but don't forward browser Origin
     for (const [key, value] of Object.entries(req.headers)) {
       if (
         !["host", "origin", "referer", "connection", "content-length"].includes(
@@ -40,14 +52,12 @@ export default async function handler(req, res) {
 
     const responseBody = await response.arrayBuffer();
 
-    // Forward response headers
     response.headers.forEach((value, key) => {
-      if (!["transfer-encoding", "content-encoding"].includes(key.toLowerCase())) {
+      if (!["transfer-encoding", "content-encoding", "set-cookie"].includes(key.toLowerCase())) {
         res.setHeader(key, value);
       }
     });
 
-    // Preserve authentication cookies
     const cookies = response.headers.getSetCookie?.();
 
     if (cookies?.length) {
