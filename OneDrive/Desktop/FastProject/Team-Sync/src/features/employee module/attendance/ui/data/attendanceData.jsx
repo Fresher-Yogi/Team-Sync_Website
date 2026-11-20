@@ -34,5 +34,110 @@ export const attendanceStats = [
   },
 ];
 
-// Keep your existing todayAttendance and attendanceRecords
-// exactly as they are below this section.
+export const todayAttendance = {
+  date: "Thursday, November 19, 2026",
+  checkIn: "09:15 AM",
+  checkOut: "--:--",
+  workingHours: "08h 15m",
+  status: "Present",
+  shift: "09:00 AM - 06:00 PM",
+};
+
+export const attendanceRecords = [
+  {
+    id: 1,
+    date: "2026-11-19",
+    checkIn: "09:15 AM",
+    checkOut: "--:--",
+    workingHours: "08h 15m",
+    status: "Present",
+  },
+  {
+    id: 2,
+    date: "2026-11-18",
+    checkIn: "09:02 AM",
+    checkOut: "06:12 PM",
+    workingHours: "09h 10m",
+    status: "Present",
+  },
+  {
+    id: 3,
+    date: "2026-11-17",
+    checkIn: "09:30 AM",
+    checkOut: "06:00 PM",
+    workingHours: "08h 30m",
+    status: "Present",
+  },
+  {
+    id: 4,
+    date: "2026-11-16",
+    checkIn: "--",
+    checkOut: "--",
+    workingHours: "--",
+    status: "Absent",
+  },
+  {
+    id: 5,
+    date: "2026-11-15",
+    checkIn: "--",
+    checkOut: "--",
+    workingHours: "--",
+    status: "Weekend",
+  },
+  {
+    id: 6,
+    date: "2026-11-14",
+    checkIn: "--",
+    checkOut: "--",
+    workingHours: "--",
+    status: "Weekend",
+  },
+  {
+    id: 7,
+    date: "2026-11-13",
+    checkIn: "09:10 AM",
+    checkOut: "06:05 PM",
+    workingHours: "08h 55m",
+    status: "Present",
+  },
+  {
+    id: 8,
+    date: "2026-11-12",
+    checkIn: "09:05 AM",
+    checkOut: "01:30 PM",
+    workingHours: "04h 25m",
+    status: "Half Day",
+  },
+  {
+    id: 9,
+    date: "2026-11-11",
+    checkIn: "--",
+    checkOut: "--",
+    workingHours: "--",
+    status: "Leave",
+  },
+  {
+    id: 10,
+    date: "2026-11-10",
+    checkIn: "09:00 AM",
+    checkOut: "06:10 PM",
+    workingHours: "09h 10m",
+    status: "Present",
+  },
+  {
+    id: 11,
+    date: "2026-11-09",
+    checkIn: "09:12 AM",
+    checkOut: "06:00 PM",
+    workingHours: "08h 48m",
+    status: "Present",
+  },
+  {
+    id: 12,
+    date: "2026-11-06",
+    checkIn: "09:20 AM",
+    checkOut: "06:15 PM",
+    workingHours: "08h 55m",
+    status: "Present",
+  },
+];
