@@ -263,4 +263,4 @@ const useDashboardHook = () => {
   };
 };
 
-export default useDashboardHook;
+export default useDashboardHook
