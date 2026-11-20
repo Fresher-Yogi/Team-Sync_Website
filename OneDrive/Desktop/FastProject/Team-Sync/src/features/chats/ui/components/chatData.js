@@ -1,0 +1,170 @@
+
+export const conversations = [
+  {
+    id: 1,
+    name: "Development Team",
+    type: "group",
+    avatar: null,
+    members: 8,
+    online: true,
+    lastMessage: "The new dashboard design looks great!",
+    time: "10:42 AM",
+    unread: 3,
+    messages: [
+      {
+        id: 1,
+        sender: "Rahul Sharma",
+        message: "Hey team! How is the dashboard development going?",
+        time: "10:20 AM",
+        isOwn: false,
+      },
+      {
+        id: 2,
+        sender: "You",
+        message: "The main layout is completed. Working on the chat section now.",
+        time: "10:25 AM",
+        isOwn: true,
+      },
+      {
+        id: 3,
+        sender: "Priya Singh",
+        message: "Great! I've completed the UI review as well.",
+        time: "10:32 AM",
+        isOwn: false,
+      },
+      {
+        id: 4,
+        sender: "Rahul Sharma",
+        message: "The new dashboard design looks great!",
+        time: "10:42 AM",
+        isOwn: false,
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Priya Singh",
+    type: "personal",
+    avatar: null,
+    online: true,
+    lastMessage: "I'll share the updated files shortly.",
+    time: "09:35 AM",
+    unread: 1,
+    messages: [
+      {
+        id: 1,
+        sender: "Priya Singh",
+        message: "Hey! Did you check the updated design?",
+        time: "09:20 AM",
+        isOwn: false,
+      },
+      {
+        id: 2,
+        sender: "You",
+        message: "Yes, everything looks good.",
+        time: "09:28 AM",
+        isOwn: true,
+      },
+      {
+        id: 3,
+        sender: "Priya Singh",
+        message: "I'll share the updated files shortly.",
+        time: "09:35 AM",
+        isOwn: false,
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Rahul Sharma",
+    type: "personal",
+    avatar: null,
+    online: false,
+    lastMessage: "Let's discuss the API integration.",
+    time: "Yesterday",
+    unread: 0,
+    messages: [
+      {
+        id: 1,
+        sender: "Rahul Sharma",
+        message: "Let's discuss the API integration.",
+        time: "04:15 PM",
+        isOwn: false,
+      },
+      {
+        id: 2,
+        sender: "You",
+        message: "Sure, we can discuss it tomorrow.",
+        time: "04:20 PM",
+        isOwn: true,
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Design Team",
+    type: "group",
+    avatar: null,
+    members: 5,
+    online: true,
+    lastMessage: "New mockups are ready for review.",
+    time: "Yesterday",
+    unread: 0,
+    messages: [
+      {
+        id: 1,
+        sender: "Neha Gupta",
+        message: "New mockups are ready for review.",
+        time: "02:10 PM",
+        isOwn: false,
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "Aman Verma",
+    type: "personal",
+    avatar: null,
+    online: true,
+    lastMessage: "Thanks for the update!",
+    time: "Mon",
+    unread: 0,
+    messages: [
+      {
+        id: 1,
+        sender: "Aman Verma",
+        message: "Thanks for the update!",
+        time: "11:30 AM",
+        isOwn: false,
+      },
+    ],
+  },
+];
+
+export const sharedFiles = [
+  {
+    id: 1,
+    name: "Dashboard-Design.pdf",
+    size: "2.4 MB",
+    type: "PDF",
+  },
+  {
+    id: 2,
+    name: "Project-Requirements.docx",
+    size: "1.8 MB",
+    type: "DOCX",
+  },
+  {
+    id: 3,
+    name: "UI-Reference.png",
+    size: "850 KB",
+    type: "PNG",
+  },
+];
+
+export const groupMembers = [
+  { id: 1, name: "Rahul Sharma", role: "Team Lead", online: true },
+  { id: 2, name: "Priya Singh", role: "UI Designer", online: true },
+  { id: 3, name: "Aman Verma", role: "Developer", online: false },
+  { id: 4, name: "Neha Gupta", role: "Designer", online: true },
+];

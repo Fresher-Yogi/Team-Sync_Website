@@ -1,0 +1,170 @@
+
+@import 'tailwindcss';
+
+/* =========================================
+   DARK THEME — EDITORIAL / MINIMAL
+   Inspired by Lionel's portfolio
+========================================= */
+
+:root {
+  color-scheme: dark;
+
+  /* COLORS */
+  --primary: #C7F36B;
+  --secondary: #A9C96A;
+  --tertiary: #E5E7EB;
+
+  --success: #8FCF83;
+  --warning: #E8BE72;
+  --danger: #E98282;
+
+  /* BACKGROUNDS */
+  --bg-main: #101010;
+  --bg-surface: #171717;
+  --bg-card: #1E1E1E;
+  --bg-hover: #292929;
+
+  /* TEXT */
+  --text-primary: #F5F5F5;
+  --text-secondary: #B8B8B8;
+  --text-muted: #777777;
+
+  /* BORDER */
+  --border-color: #303030;
+
+  /* SHADOW */
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+  /* RADIUS */
+  --radius-md: 10px;
+}
+
+
+/* =========================================
+   LIGHT THEME — CLEAN / WARM
+   Inspired by Podcast Web Platform
+========================================= */
+
+.light {
+  color-scheme: light;
+
+  /* COLORS */
+  --primary: #F47745;
+  --secondary: #E9936F;
+  --tertiary: #64748B;
+
+  --success: #269B68;
+  --warning: #D99A32;
+  --danger: #DC5656;
+
+  /* BACKGROUNDS */
+  --bg-main: #F5F6F7;
+  --bg-surface: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-hover: #F0F1F2;
+
+  /* TEXT */
+  --text-primary: #191919;
+  --text-secondary: #555B63;
+  --text-muted: #92979F;
+
+  /* BORDER */
+  --border-color: #E5E7EB;
+
+  /* SHADOW */
+  --shadow-md: 0 8px 24px rgba(30, 30, 30, 0.06);
+
+  /* RADIUS */
+  --radius-md: 10px;
+}
+
+
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Selection */
+::selection {
+  background: var(--primary);
+  color: #101010;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+
+
+/* =========================
+   NOTHING-INSPIRED TYPOGRAPHY
+========================= */
+
+/* Nothing dot-matrix font */
+@font-face {
+  font-family: "NDot55";
+  src: url("/fonts/NDot-55.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Font system */
+:root {
+  --font-brand: "NDot55", monospace;
+  --font-ui: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+}
+
+/* Main application */
+body {
+  font-family: var(--font-ui);
+}
+
+/* Team-Sync branding */
+.brand-name {
+  font-family: var(--font-brand);
+  font-weight: 400;
+}
+
+/* Technical labels */
+.technical-text {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Dashboard headings */
+h1, h2, h3 {
+  font-family: var(--font-ui);
+}
