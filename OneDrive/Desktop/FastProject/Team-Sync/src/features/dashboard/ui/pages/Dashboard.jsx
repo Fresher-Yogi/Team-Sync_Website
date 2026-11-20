@@ -2,7 +2,7 @@
 import DashboardStats from "../components/dashboardcomp/DashboardStats";
 import TaskBoard from "../components/dashboardcomp/TaskBoard";
 import TaskProgress from "../components/dashboardcomp/TaskProgress";
-import DepartmentWorkload from "../components/dashboardcomp/DepartmentWorkLoad";
+import DepartmentWorkload from "../components/dashboardcomp/DepartmentWorkload";
 
 import useDashboardHook from "../../hooks/useDashboardHook";
 
