@@ -9,13 +9,6 @@ const DashboardLayout = () => {
   let { mode } = useSelector((store) => store.theme);
   console.log(mode);
 
-  // useEffect(() => {
-  //   if (mode === "light") {
-  //     document.body.classList.add("light");
-  //   } else {
-  //     document.body.classList.remove("light");
-  //   }
-  // }, [mode]);
 
   useEffect(() => {
     if (mode === "light") {

@@ -1,7 +1,7 @@
 import {
   ChartArea,
+  LayoutGrid,
   File,
-  LayoutDashboard,
   List,
   ListCheck,
   Network,
@@ -11,13 +11,11 @@ import {
   UserCircle,
 } from "lucide-react";
 
-
 // Admin Navigation Routes
-
 export let adminNavigations = [
   {
     path: "/home",
-    icon: <LayoutDashboard />,
+    icon: <LayoutGrid />,
     title: "Dashboard",
   },
   {
@@ -53,12 +51,11 @@ export let adminNavigations = [
   },
 ];
 
-
 // Employee Navigation Routes
 export let employeeNavigations = [
   {
     path: "/home",
-    icon: <LayoutDashboard />,
+    icon: <LayoutGrid />,
     title: "Dashboard",
   },
   {
