@@ -13,10 +13,14 @@ axiosInstance.interceptors.response.use(
   async (error) => {
     let OriginalReq = error.config;
 
+    // Refresh only when a request receives 401
     if (
       error.response?.status === 401 &&
+      OriginalReq &&
       !OriginalReq._retry &&
-      !OriginalReq.url.includes("/auth/get-accessToken")
+      !OriginalReq.url?.includes("/auth/login") &&
+      !OriginalReq.url?.includes("/auth/register") &&
+      !OriginalReq.url?.includes("/auth/get-accessToken")
     ) {
       OriginalReq._retry = true;
 
@@ -30,6 +34,7 @@ axiosInstance.interceptors.response.use(
         if (window.location.pathname !== "/") {
           window.location.href = "/";
         }
+
         return Promise.reject(refreshError);
       }
     }
@@ -37,11 +42,6 @@ axiosInstance.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-
-
-
-
-
 
 
 
