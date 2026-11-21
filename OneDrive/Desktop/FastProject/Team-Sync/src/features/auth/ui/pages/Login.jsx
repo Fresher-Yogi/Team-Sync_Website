@@ -69,6 +69,9 @@ const Login = () => {
               <div className="flex-grow border-t border-[var(--border-color)]" />
             </div>
 
+          <p className="text-[12px] mb-2"> adminEmail:- swaraj@gmail.com & password:- 12345678 </p>
+          <p className="text-[12px]"> employeeEmail:- dev@gmail.com & password:- 12345678 </p>
+            
             {/* Form */}
             <form onSubmit={handleSubmit(loginSubmit)} className="space-y-6">
               {/* Email */}
