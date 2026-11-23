@@ -5,7 +5,7 @@ import { Navigate, Outlet } from 'react-router'
 const RoleBaseRoute = ({allowedRoles}) => {
 
     let {employee} = useSelector((store)=> store.auth)
-    
+    console.log(employee);
 
     if(!allowedRoles.includes(employee?.role)){
         return <Navigate to={'/unauthorized'} />
